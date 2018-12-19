@@ -10,6 +10,9 @@ const SecondPage = () => (
     <div>
     <ul className="materials">
       <li>
+        <Link to="/gnu-toolchain">RISC-V GNU Toolchain (Guia de Instalação)</Link>
+      </li>
+      <li>
         <Link to="/spike">Simulador Spike (Guia de Instalação)</Link>
       </li>
       <li>
