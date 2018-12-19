@@ -31,13 +31,13 @@ const SpikeTutorial = () => (
             <li>
                 Para finalizar a primeira etapa...
                 <code>
-                    make install
+                   [sudo] make install
                 </code>
             </li>
         </ol>
         <h4>Etapa 2: Instalar o Spike RISC-V ISA Simulator</h4>
         <ol className="tutorial">
-            <li>Clone o repositório <strong>riscv-fesvr</strong> (RISC-V Frontend Server).
+            <li>Clone o repositório <strong>riscv-fesvr</strong> (RISC-V ISA Simulator).
                 <code>
                     git clone https://github.com/riscv/riscv-isa-sim.git
                 </code>
@@ -52,13 +52,7 @@ const SpikeTutorial = () => (
                 <code>
                     cd riscv-isa-sim
                 </code>
-            </li>
-            <li>
-                Em seguida, entre no repositório clonado.
-                <code>
-                    cd riscv-isa-sim
-                </code>
-            </li>
+            </li>            
             <li>
                 Crie a uma pasta chamada build e entre nela.
                 <code>
@@ -68,14 +62,14 @@ const SpikeTutorial = () => (
             <li>
                 Dentro da pasta o seguinte comando de configuração.
                 <code>
-                    ../configure --prefix=$RISCV --target=riscv64-unknown-elf
+                    ../configure --prefix=$RISCV --with-fesvr=$RISCV
                 </code>
             </li>
             <li>
                 Execute estes dois comandos para finalizar.
                 <code>
                     make<br/>
-                    make install
+                    [sudo] make install
                 </code>
             </li>
         </ol>
